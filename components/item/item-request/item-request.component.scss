@@ -1,0 +1,72 @@
+.space {
+    margin: auto;
+    width: 100%;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: white;
+    
+  }
+  
+.form {
+    margin: auto;
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+.title {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  .titletext {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 49, 0);
+    text-align: center;
+    font-size: x-large;
+}
+
+label {
+    float: right;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    text-align: center;
+    background-color: rgb(0, 49, 0);
+    border-radius: 10%;
+  }
+
+  .next {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }

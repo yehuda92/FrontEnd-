@@ -1,0 +1,26 @@
+
+<h1>הוסף אפשרויות למשתמש</h1>
+
+<div class="container">
+    <div class="box">
+        <form #addSizeForm="ngForm" (ngSubmit)= "addSize()">
+            <input type="submit" value="הוסף"> 
+            <input type="size" ngModel name="size" required>
+            <label>מידה</label>
+        </form>
+    </div>
+    <div class="box">
+        <form #addTypeForm="ngForm" (ngSubmit)= "addType()">
+            <input type="submit" value="הוסף"> 
+            <input type="type" ngModel name="type" required>
+            <label>סוג</label>
+        </form>
+    </div>
+    <div class="box">
+        <form #addCatgoryForm ="ngForm" (ngSubmit)= "addCatgory()">
+            <input type="submit" value="הוסף"> 
+            <input type="catgory" ngModel name="catgory" required>
+            <label>קטגוריה</label>
+        </form>
+    </div>
+</div>

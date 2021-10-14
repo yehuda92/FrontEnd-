@@ -1,0 +1,36 @@
+<div *ngIf="onForm">
+    <div class="title">הרשמה מהירה</div>
+    <form class="login" #signUpForm="ngForm" (ngSubmit)= "signUp()">
+        <div>
+            <label>שם פרטי</label>
+            <input type="text" ngModel name="firstName" required>
+        </div>
+        <div>
+            <label>שם משפחה</label>
+            <input type="text" ngModel name="lastName" required>
+        </div>
+        <div>
+            <label>מייל</label>
+            <input type="email" ngModel name="email" required>
+        </div>
+        <div>
+            <label>טלפון</label>
+            <input type="tel" ngModel name="phoneNumber" required>
+        </div>
+        <div>
+            <label>סיסמא</label>
+            <input type="password" ngModel name="password" required>
+        </div>
+        <div>
+            <input type="submit" value="התחברות"> 
+        </div>
+    </form>
+    </div>
+    
+   
+    <div *ngIf="!onForm">
+        <app-login></app-login>
+    </div> 
+    <router-outlet>  </router-outlet>
+    
+    

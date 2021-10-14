@@ -1,0 +1,45 @@
+<h2></h2>
+<div>
+<table class="container">
+  <tr>
+    <td class="box">תאריך הצטרפות</td>
+    <td class="box">טלפון</td>
+    <td class="box">כתובת מייל</td>
+    <td class="box">שם משפחה</td>
+    <td class="box">שם פרטי</td>
+  </tr>
+  <tr>
+    <td>{{user[0].joinDate | date:"MM/dd/yy"}}</td>
+    <td>{{user[0].phoneNumber}}</td>
+    <td>{{user[0].email}}</td>
+    <td>{{user[0].lastName}}</td>
+    <td>{{user[0].firstName}}</td>
+  </tr>
+</table>
+</div>
+
+<div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <button class="btn btn-info bi" (click)="getUserItems()">פריטים שהעלה המשתמש</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info bi" (click)="addAdmin()">שנה הראשות משתמש</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info bi" (click)="getUserItems()">פריטים שהעלה המשתמש</button>
+        <div class="items">
+            <div *ngIf="show"> 
+            <button (click)="nextImg()"><i class='fas fa-chevron-left'></i></button>
+                <img src="{{items[i].image}}" alt="">
+            <button (click)="nextImg()"><i class='fas fa-chevron-right'></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+       

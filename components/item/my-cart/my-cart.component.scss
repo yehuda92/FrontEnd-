@@ -1,0 +1,82 @@
+
+  .container {
+    max-width: 100%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+  }
+  
+  .box {
+    border: 1px solid ;
+    background: white;
+    padding: lan;
+    border-radius: 10%;
+  }
+  
+  img {
+    padding: 32px 32px;
+  }
+  
+  P.blocktexttitle {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 15px;
+    font-size: large;
+    color: rgb(235, 60, 89);
+  }
+  
+  P.blocktexttype {
+    font-weight: bold;
+    text-align: center;
+  }
+    
+    
+    
+    
+    
+
+.info {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    text-align: right;
+    color: black;
+  }
+  
+  img {
+    padding: 32px 32px;
+  }
+  
+  .box .blocktext {
+    float: right;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: large;
+    color: black;
+  }
+  
+.remove {
+  float: right;
+  border: none;
+  padding-top: 15px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+
+.nresulte{
+    text-align:center;
+    max-width: 100%;
+    background-color: white;
+    margin: 10px;
+  }
+  
+    
+    
+    
+    
+    
+    
+    

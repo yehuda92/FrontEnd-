@@ -1,0 +1,41 @@
+
+<div class="space"></div>
+<div *ngIf="!on" class="form"> 
+    <div class="title">
+        <p class="titletext">טופס בקשת פריט</p>
+    </div>
+    <form #requestForm="ngForm" (ngSubmit)= "sendRequest()">
+    
+        <div>
+            <label> :שם פרטי </label><br>
+            <input type="text" ngModel name="firstName">
+        </div>
+    
+        <div>
+            <label> :שם משפחה </label><br>
+            <input type="text" ngModel name="lastName">
+        </div>
+    
+        <div>
+            <label> :מייל </label><br>
+            <input type="email" ngModel name="email" required>
+        </div>
+    
+        <div>
+            <label> :תוכן הבקשה </label><br>
+            <textarea cols="70" rows="5" ngModel name="note" > </textarea>
+           
+        </div>
+        
+        <div>
+            <button class="text-white" type="submit">שלח בקשה</button> 
+        </div>
+    </form>
+    </div>
+    
+    
+    <div *ngIf="on" class="title">
+        <p>ההודעה נשלחה לחץ כאן לחזרה  לעגלה שלי</p>
+
+        <button class="text-white" routerLink="/myCart" (click)="removeFromCart()"> חזרה לעגלת הפריטים </button> 
+    </div>

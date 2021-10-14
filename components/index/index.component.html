@@ -1,0 +1,14 @@
+<body> 
+    <div class="container">
+          <div class="box" *ngFor ="let item of items">
+            <p class="blocktexttitle">{{item.for}}</p>
+            <a (click)="sendItem(item)" routerLink="/item"> 
+              <img src="{{item.image}}" >  
+            </a>
+            <p class="blocktexttype">{{item.type}}</p>
+          </div>
+        </div>  
+    </body>
+      
+      
+    

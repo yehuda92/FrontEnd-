@@ -1,0 +1,30 @@
+<div *ngIf="on">
+    <p class="title">טופס עדכון פרטים {{user[0].firstName}} {{user[0].lastName}}</p><br>
+    
+    <form class="update" #updateForm="ngForm" (ngSubmit)= "update()">
+            <div>
+                <label>שם פרטי</label>
+                <input type="text" ngModel name="firstName" placeholder="{{user[0].firstName}}" required>
+            </div>
+            <div>
+                <label>שם משפחה</label>
+                <input type="text" ngModel name="lastName"  placeholder="{{user[0].lastName}}" required>
+            </div>
+            <div>
+                <label>טלפון</label>
+                <input type="tel" ngModel name="phoneNumber"  placeholder="{{user[0].phoneNumber}}" required>
+            </div>
+            <div>
+                <label>סיסמא</label>
+                <input type="password" ngModel name="password" required>
+            </div>
+            <div>
+                <input type="submit" value="עדכן"> 
+            </div>
+        </form>
+        
+    </div>
+     <div *ngIf="!on" class="nresulte"><h1> פרטי המשתמש עודכנו בהצלחה ! </h1></div>
+    
+        
+        

@@ -1,0 +1,46 @@
+.title {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: right;
+    font-size: x-large;
+  }
+  
+  .error {
+    text-align: right;
+  }
+  
+  .login {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(206, 206, 206);
+    padding: 10px;
+  }
+  
+  input[type=email], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      text-align: right;
+    }
+  
+    label {
+      float: right;
+    }
+  
+    input[type=submit] {
+      background-color: rgb(10, 210, 245);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+  
+    .rp {
+      float: right;
+    }

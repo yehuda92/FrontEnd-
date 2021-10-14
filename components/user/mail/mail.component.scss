@@ -1,0 +1,70 @@
+.space {
+    margin: auto;
+    width: 100%;
+    border: 3px solid white;
+    padding: 5px;
+    background-color: white;
+  }
+
+.messages {
+    margin: auto;
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+.title {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+  .titletext {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 49, 0);
+    text-align: center;
+    font-size: x-large;
+}
+ 
+.special {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+.saveable {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid red;
+    box-sizing: border-box;
+    text-align: right;
+  }
+
+.blocktext {
+   
+    color: palevioletred;
+    text-align: right;
+    font-size: large;
+}
+
+.openMessage{
+  width: 100%;
+  border: none;
+  background-color: white;
+  text-align: right;
+  font-weight: bold;
+}
+
+button {
+      float: left;
+      margin-left: 10px;
+   }

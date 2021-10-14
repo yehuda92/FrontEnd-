@@ -1,0 +1,36 @@
+
+<div *ngIf="!next" class="title">
+    <h1>אתר אופנה אקולוגית</h1>
+    <p>
+                   אופנה אקולוגית רוצה ליצור קהילה של משתמשים
+           אשר יוכלו לעלות את פריטי הלבוש וכן גם להיחשף לפריטי הלבוש של משתמשים אחרים
+          ובכך ע"י שימוש חוזר בפריטים יכולים אותם משתמשים לסייע בשמירה על הסביבה
+    </p>
+
+  
+</div>
+<div  *ngIf="!next" > 
+    <p class="title"> חושבים שיש לנו מה לשפר? כתבו לנו</p><br>
+    <form class="systemMessages" #systemMessages="ngForm" (ngSubmit)= "sendEmail()">
+        <div>
+            <label>כתובת דואר אלקטרוני</label>
+            <input type="email" ngModel name="email" required>
+        </div>
+        <div>
+            <label>נושא</label>
+            <input type="text" ngModel name="subject" required>
+        </div>
+        <div>
+            <label>תוכן ההודעה</label>
+            <textarea  ngModel name="text" required rows="4" cols="50">
+            </textarea>
+    
+            <input type="submit" value="שלח"> 
+        </div>
+    </form>
+</div>
+
+<div class="next" *ngIf="next">
+    <p class="title">ההודעה נשלחה לחץ כאן לחזרה לדף הבית</p>
+    <button  routerLink="/" ><p class="blocktext">דף הבית</p></button>
+</div>

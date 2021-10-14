@@ -1,0 +1,29 @@
+   
+   <div class="space"></div>
+   <div class="messages">
+    <div class="title">
+        <p class="titletext"> הודעות שהתקבלו עבור  {{messages[0].firstName}}</p>
+    </div>
+            <ul *ngFor ="let message of messages let i = index">
+                <div [class.saveable]="!message.status" [class.special]="message.status"> 
+                <button class="openMessage" (click)="showMessage(i)">  מאת: {{message.source}}</button>
+                    <div *ngIf="i === openMessage"> 
+                    <label>{{messages[i].createAt | date: 'dd/MM/yyyy'}} :התקבלה בתאריך </label><br>
+                    <label>{{messages[i].subject}} :עבור </label><br>
+                    <label> תוכן ההודעה: {{messages[i].message}} </label><br>
+                    <label><a>{{messages[i].email}}</a> :כתובת השולח </label><br>
+                    <button class="btn btn-danger" (click)="deleteMessage(i)"> מחק הודעה </button>
+                    <button  *ngIf="!messages[i].status" class="btn btn-info" (click)="markAsRead(i)"> סמן כנקרא </button><br>
+                    </div>
+                </div>
+            </ul>
+   </div>
+
+
+
+
+
+
+   
+   
+   

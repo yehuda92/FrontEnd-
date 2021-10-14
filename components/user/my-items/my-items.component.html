@@ -1,0 +1,22 @@
+<div *ngIf="on" class="items">
+    <div *ngFor ="let item of items let i = index">
+      <div class="item"> 
+      <a routerLink="/itemRequest" (click)="sendItem(item)"> 
+        <img src="{{item.image}}" (mouseover)="printInfo(i)"><br>
+      <div *ngIf="i === info"> 
+        <label class="info"> סוג הבגד: {{items[i].type}}</label><br>
+        <label class="info"> קטגוריה: {{items[i].category}}</label><br>
+        <label class="info"> {{items[i].size}} מידה: </label><br>
+        <label class="note"> {{items[i].note}} </label><br>
+      </div>
+      </a>
+      <button class="remove" (click)="removeItem(i)">הסר פריט זה</button>
+      <button class="plusinfo"><i class="fa fa-plus" (click)="printInfo(i)"></i></button>    </div>
+    </div>
+  </div>
+  <div class="nresulte" *ngIf="!on"><h1>אין פריטים</h1></div>
+
+
+
+
+  

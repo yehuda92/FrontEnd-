@@ -1,0 +1,18 @@
+<p class="title">מחק משתמש</p><br>
+
+   <div class="update" *ngIf="on"> 
+   <form #deleteForm="ngForm" (ngSubmit)= "delete()">
+        <div>
+            <label>Password</label>
+            <input type="password" ngModel name="password" required>
+        </div>
+        <div>
+            <input type="submit" value="מחק משתמש"> 
+        </div>
+    </form>
+ </div>
+
+ <div *ngIf="!on"><app-index></app-index></div>
+       
+    
+    

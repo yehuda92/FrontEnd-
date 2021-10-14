@@ -1,0 +1,21 @@
+<h2>משתמשים רשומים באתר</h2>
+
+<table class="container">
+  <tr>
+    <td class="box">תאריך הצטרפות</td>
+    <td class="box">טלפון</td>
+    <td class="box">כתובת מייל</td>
+    <td class="box">שם משפחה</td>
+    <td class="box">שם פרטי</td>
+    <td class="td"> </td>
+  </tr>
+  <tr *ngFor="let user of users let i = index" >
+    <td>{{user.joinDate | date:"MM/dd/yy"}}</td>
+    <td>{{user.phoneNumber}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.firstName}}</td>
+    <td><button (click)="getUserID(i)" routerLink="/userProfileMenagment" style="width: 100%;">ערוך משתמש</button></td>
+  </tr>
+</table>
+

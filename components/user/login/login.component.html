@@ -1,0 +1,30 @@
+
+
+<div *ngIf="onForm">
+    <p class="title">כניסה מהירה משתמשים רשומים</p><br>
+<form class="login" #loginForm="ngForm" (ngSubmit)= "login()">
+    <p *ngIf="onError" class="error text-danger">שם משתמש או סיסמה שגוים</p>
+    <div>
+        <label>כתובת דואר אלקטרוני</label>
+        <input type="email" ngModel name="email" required>
+    </div>
+    <div>
+        <label>סיסמה</label>
+        <input type="password" ngModel name="password" required>
+    </div>
+      <a class="rp" routerLink="/signUp"> שכחת סיסמה </a> 
+    <div>
+        <input type="submit" value="התחברות"> 
+    </div>
+    <div class="title">עוד לא נרשמת ?   <a routerLink="/signUp">הרשמה </a> </div>
+
+</form>
+
+</div>
+
+<div *ngIf="!onForm">
+    <app-index></app-index>
+</div> 
+<router-outlet>  </router-outlet>
+
+

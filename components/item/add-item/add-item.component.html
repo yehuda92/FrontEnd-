@@ -1,0 +1,65 @@
+<div class="space"></div>
+
+<div class="form" *ngIf="on && !next"> 
+    <div class="title">
+        <p class="titletext">טופס העלאת פריט</p>
+    </div>
+<form #itemForm="ngForm" (ngSubmit)= "createItem()">
+    <div>
+        <label> :קטגוריה </label><br>
+        <select ngModel name="category" required>
+            <option value="" disabled selected>בבקשה בחר קטגוריה</option>
+            <option *ngFor ="let category of categories let i = index" value="{{i+1}}">{{category.category}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label> :סוג הבגד </label><br>
+        <select ngModel name="type" required>
+            <option value="" disabled selected>בבקשה בחר סוג פריט</option>
+            <option *ngFor ="let type of types let i = index" value="{{i+1}}">{{type.type}}</option>
+        </select>
+    </div>
+    
+    <div>
+        <label> :מידה </label><br>
+        <select ngModel name="size" required>
+            <option value="" disabled selected>בבקשה בחר מידה</option>
+            <option *ngFor ="let size of sizes let i = index" value="{{i+1}}">{{ size.size }}</option>
+        </select>
+    </div>
+
+    
+    <div>
+        <label> :עבור </label><br>
+        <select ngModel name="for">
+            <option value="מסירה"> מסירה</option>
+            <option value="החלפה"> החלפה</option>
+        </select>
+    </div>
+    
+    <div>
+        <label> :תיאור </label><br>
+        <textarea cols="70" rows="5" ngModel name="note" > </textarea>
+       
+    </div> 
+    
+    <div>
+        <input class="uplodeImage" (change)="onFileSelected($event)" type="file">
+            <img [src]="imagData" >
+    </div>
+   
+    <div>
+        <button class="text-white" type="submit">העלה פריט</button>
+    </div>
+</form>
+</div>
+
+    
+<div *ngIf="next" class="title">
+    <p>הפריט הועלה לאתר</p>
+
+    <button class="text-white" (click)="newItem()" > הוסף פריט נוסף</button> 
+</div>
+
+<div *ngIf="!on"><app-login></app-login></div>

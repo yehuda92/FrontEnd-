@@ -1,0 +1,27 @@
+<div class="text-white space">
+    <article>
+        <h1><i class="fa fa-leaf" style="font-size:60px;color: white;text-shadow:2px 2px 4px "></i> אופנה אקולוגית</h1>
+        <p class="text-white"> אתר להחלפת בגדים יד שניה </p>
+      </article>
+</div>
+
+<div class="container novigation">
+    
+    <button class="child" routerLink="/"><p class="blocktext"> דף הבית <i class="fa fa-home"></i></p></button>
+    <button class="child" routerLink="/about"><p class="blocktext">אודות</p></button>
+
+    <button class="child" routerLink="/addItem" ><p class="blocktext">הוסף פריט</p></button>
+    <button class="child" routerLink="myCart"><p class="blocktext">העגלה שלי</p></button>
+
+    <button class="child" *ngIf="loginIcon" routerLink="/login"><p class="blocktext">התחבר</p></button>
+    <button class="child" *ngIf="!loginIcon" routerLink="/mail"><p> הודעות </p></button><br>
+    <button class="child" *ngIf="!loginIcon" routerLink="/profile"><p class="blocktext"> איזור אישי </p></button><br>
+    <form class="child"  #search="ngForm" (ngSubmit)= "searchItems()">
+        <input class="child blocktext" type="text" placeholder="Search.." ngModel name="search">
+        <button class="blocktext" type="submit" routerLink="/searchResults"><i class="fa fa-search "></i></button>
+    </form>
+</div>
+
+  
+
+<router-outlet>  </router-outlet>

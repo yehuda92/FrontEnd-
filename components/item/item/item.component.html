@@ -1,0 +1,22 @@
+ 
+    <div class="card text-center items" style="max-width: 202px;">
+
+        <!-- Heading -->
+        <div class="card-body">
+            <h4 class="card-title"> פריט מספר {{item.itemID}}</h4>
+            <h6 class="card-subtitle text-muted"> סוג הבגד:  {{item.type}} </h6>
+            <h6 class="card-subtitle text-muted">קטגוריה: {{item.category}} </h6>
+            <h6 class="card-subtitle text-muted">{{item.size}} :מידה </h6>
+        </div>
+        
+        <!-- Image -->
+        <img src="{{item.image}}" alt="Photo of item">
+        
+        <!-- Text Content -->
+        <div class="card-body">
+        <p class="card-text">{{item.note}}</p>
+        <button class="btn btn-primary" (click)="addToMyCart()">הוסף לעגלה </button>
+        </div>
+        
+
+
